@@ -71,6 +71,8 @@ header.navbar {
 }
 
 .btn-main {
+  background: var(--accent);
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   text-decoration: none;
@@ -84,7 +86,6 @@ header.navbar {
   max-width: 1200px;
   margin: auto;
 }
-
 
 .about-wrapper {
   display: flex;
