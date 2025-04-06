@@ -1,152 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emmanuel Amoa-Menyah Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">Emmanuel</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="darkToggle">🌓</button></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanuel Amoa-Menyah Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Emmanuel</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="darkToggle">🌓</button></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Emmanuel Amoa-Menyah</h1>
-    <p>IT Support | Frontend Developer | Graphic Designer</p>
-    <a href="#contact" class="btn-main">Let's Connect</a>
-  </section>
+    <section class="hero">
+      <h1>Emmanuel Amoa-Menyah</h1>
+      <p>IT Support | Frontend Developer | Graphic Designer</p>
+      <a href="#contact" class="btn-main">Let's Connect</a>
+    </section>
+    <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
 
-  <section id="about">
-    <h2>About Me</h2>
-  
-    <div class="about-wrapper">
-      <div class="about-image">
-        <img src="Profile.jpg" alt="Emmanuel Amoa-Menyah">
-      </div>
-  
-      <div class="about-info">
-        <p><strong>I'm Emmanuel Amoa-Menyah</strong>, an IT Support Specialist.</p>
-  
-        <p>
-          I have experience in hardware, software, and network support.
-          I enjoy solving technical problems and helping users work better with technology.
-        </p>
-  
-        <p>
-          I’ve worked with Microsoft 365, built emergency preparedness tools,
-          and supported critical business systems.
-        </p>
-  
-        <p>
-          I'm focused, curious, and always improving my skills.
-        </p>
-  
-        <div class="about-stats">
-          <div class="stat-box">
-            <h3>1.5+</h3>
-            <p>Years Experience</p>
+      <div class="about-wrapper">
+        <div class="about-image">
+          <img src="Profile.jpg" alt="Emmanuel Amoa-Menyah" />
+        </div>
+
+        <div class="about-info">
+          <p>
+            <strong>I'm Emmanuel Amoa-Menyah</strong>, an IT Support Specialist.
+          </p>
+
+          <p>
+            I have experience in hardware, software, and network support. I
+            enjoy solving technical problems and helping users work better with
+            technology.
+          </p>
+
+          <p>
+            I’ve worked with Microsoft 365, built emergency preparedness tools,
+            and supported critical business systems.
+          </p>
+
+          <p>I'm focused, curious, and always improving my skills.</p>
+
+          <div class="about-stats">
+            <div class="stat-box">
+              <h3>1.5+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-box">
+              <h3>10+</h3>
+              <p>Projects Done</p>
+            </div>
+            <div class="stat-box">
+              <h3>5+</h3>
+              <p>Tech Areas</p>
+            </div>
+            <div class="stat-box">
+              <h3>100%</h3>
+              <p>Effort Given</p>
+            </div>
           </div>
-          <div class="stat-box">
-            <h3>10+</h3>
-            <p>Projects Done</p>
-          </div>
-          <div class="stat-box">
-            <h3>5+</h3>
-            <p>Tech Areas</p>
-          </div>
-          <div class="stat-box">
-            <h3>100%</h3>
-            <p>Effort Given</p>
+
+          <div class="about-services">
+            <h4>What I Do</h4>
+            <ul>
+              <li>Technical Support – hardware, software, and network</li>
+              <li>Microsoft 365 – Teams, Outlook, SharePoint</li>
+              <li>Web Dev – HTML, CSS, JavaScript</li>
+              <li>Automation – PowerApps, PowerAutomate</li>
+              <li>Design – Photoshop, Illustrator, Canva</li>
+            </ul>
           </div>
         </div>
-  
-        <div class="about-services">
-          <h4>What I Do</h4>
-          <ul>
-            <li>Technical Support – hardware, software, and network</li>
-            <li>Microsoft 365 – Teams, Outlook, SharePoint</li>
-            <li>Web Dev – HTML, CSS, JavaScript</li>
-            <li>Automation – PowerApps, PowerAutomate</li>
-            <li>Design – Photoshop, Illustrator, Canva</li>
-          </ul>
+      </div>
+    </section>
+
+      <section id="projects" style="margin-top: 4rem">
+        <h2>Projects</h2>
+
+        <!-- Graphic Design -->
+        <div>
+          <h3>Graphic Design</h3>
+          <div style="display: flex; gap: 1rem">
+            <img src="design1.jpg" alt="Design Work 1" width="150" />
+            <img src="design2.jpg" alt="Design Work 2" width="150" />
+          </div>
+          <p>
+            <a href="https://www.pinterest.com/yourusername" target="_blank"
+              >See more on Pinterest →</a
+            >
+          </p>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  
 
-  <section id="projects" style="margin-top: 4rem;">
-    <h2>Projects</h2>
-  
-    <!-- Graphic Design -->
-    <div>
-      <h3>Graphic Design</h3>
-      <div style="display: flex; gap: 1rem;">
-        <img src="design1.jpg" alt="Design Work 1" width="150">
-        <img src="design2.jpg" alt="Design Work 2" width="150">
-      </div>
-      <p><a href="https://www.pinterest.com/yourusername" target="_blank">See more on Pinterest →</a></p>
-    </div>
-  
-    <!-- Web Development -->
-    <div style="margin-top: 2rem;">
-      <h3>Web Development</h3>
-      <div style="display: flex; gap: 1rem;">
-        <img src="web1.jpg" alt="Web Project 1" width="150">
-        <img src="web2.jpg" alt="Web Project 2" width="150">
-      </div>
-      <p><a href="https://github.com/yourusername" target="_blank">Explore my GitHub →</a></p>
-    </div>
-  
-    <!-- Tech Support -->
-    <div style="margin-top: 2rem;">
-      <h3>Tech Support</h3>
-      <div style="display: flex; gap: 1rem;">
-        <img src="review1.jpg" alt="Support Review 1" width="150">
-        <img src="review2.jpg" alt="Support Review 2" width="150">
-      </div>
-      <p><a href="#support-reviews">See support reviews ↓</a></p>
-    </div>
-  </section>
-  
+        <!-- Web Development -->
+        <div style="margin-top: 2rem">
+          <h3>Web Development</h3>
+          <div style="display: flex; gap: 1rem">
+            <img src="web1.jpg" alt="Web Project 1" width="150" />
+            <img src="web2.jpg" alt="Web Project 2" width="150" />
+          </div>
+          <p>
+            <a href="https://github.com/yourusername" target="_blank"
+              >Explore my GitHub →</a
+            >
+          </p>
+        </div>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>IT Support (Hardware/Software)</li>
-      <li>Microsoft 365 (Teams, Outlook, SharePoint)</li>
-      <li>Web Dev (HTML, CSS, JavaScript)</li>
-      <li>Python</li>
-      <li>Graphic Design (Photoshop, Illustrator)</li>
-      <li>PowerApps & PowerAutomate</li>
-    </ul>
-  </section>
+        <!-- Tech Support -->
+        <div style="margin-top: 2rem">
+          <h3>Tech Support</h3>
+          <div style="display: flex; gap: 1rem">
+            <img src="review1.jpg" alt="Support Review 1" width="150" />
+            <img src="review2.jpg" alt="Support Review 2" width="150" />
+          </div>
+          <p><a href="#support-reviews">See support reviews ↓</a></p>
+        </div>
+      </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+      <section id="support-reviews" style="margin-top: 1rem">
+        <h2>Support Reviews</h2>
+        <div style="display: flex; gap: 1rem">
+          <img src="review1.jpg" alt="Support Review 1" width="300" />
+          <img src="review2.jpg" alt="Support Review 2" width="300" />
+        </div>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 Emmanuel Amoa-Menyah</p>
-  </footer>
-</body>
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>IT Support (Hardware/Software)</li>
+          <li>Microsoft 365 (Teams, Outlook, SharePoint)</li>
+          <li>Web Dev (HTML, CSS, JavaScript)</li>
+          <li>Python</li>
+          <li>Graphic Design (Photoshop, Illustrator)</li>
+          <li>PowerApps & PowerAutomate</li>
+        </ul>
+      </section>
+  
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+
+    
+
+    <footer>
+      <p>&copy; 2025 Emmanuel Amoa-Menyah</p>
+    </footer>
+  </body>
 </html>

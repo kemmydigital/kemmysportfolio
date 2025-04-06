@@ -71,8 +71,6 @@ header.navbar {
 }
 
 .btn-main {
-  background: var(--accent);
-  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   text-decoration: none;
@@ -86,6 +84,7 @@ header.navbar {
   max-width: 1200px;
   margin: auto;
 }
+
 
 .about-wrapper {
   display: flex;
@@ -161,6 +160,53 @@ header.navbar {
   color: var(--accent);
 }
 
+* Projects Section Enhancements */
+#projects {
+  padding: 3rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-category {
+  margin-top: 2rem;
+}
+
+.project-images {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.project-images img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Support Reviews Section */
+#support-reviews {
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.review-images {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.review-images img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Container for consistent spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 /* Sections and Cards */
 .section {
   padding: 3rem 2rem;
@@ -198,9 +244,9 @@ header.navbar {
 
 /* Skills and Form */
 .skills-list {
-  list-style: disc;
+  columns: 1;
+  column-gap: 2rem;
   padding-left: 1.5rem;
-  font-size: 1.1rem;
 }
 
 form {
