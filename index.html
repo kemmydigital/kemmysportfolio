@@ -4,19 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Amoa-Menyah Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="icon" sizes="180x180" href="/images/favicon.png" type="image/png">
+
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
     <header class="navbar">
       <div class="logo">Emmanuel</div>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
       <nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><button id="darkToggle">🌓</button></li>
+          <li><button id="darkToggle" aria-label="Toggle dark mode">🌓</button></li>
         </ul>
       </nav>
     </header>
@@ -26,114 +34,109 @@
       <p>IT Support | Frontend Developer | Graphic Designer</p>
       <a href="#contact" class="btn-main">Let's Connect</a>
     </section>
+
     <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
+      <section id="about">
+        <h2>About Me</h2>
 
-      <div class="about-wrapper">
-        <div class="about-image">
-          <img src="Profile.jpg" alt="Emmanuel Amoa-Menyah" />
-        </div>
-
-        <div class="about-info">
-          <p>
-            <strong>I'm Emmanuel Amoa-Menyah</strong>, an IT Support Specialist.
-          </p>
-
-          <p>
-            I have experience in hardware, software, and network support. I
-            enjoy solving technical problems and helping users work better with
-            technology.
-          </p>
-
-          <p>
-            I’ve worked with Microsoft 365, built emergency preparedness tools,
-            and supported critical business systems.
-          </p>
-
-          <p>I'm focused, curious, and always improving my skills.</p>
-
-          <div class="about-stats">
-            <div class="stat-box">
-              <h3>1.5+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div class="stat-box">
-              <h3>10+</h3>
-              <p>Projects Done</p>
-            </div>
-            <div class="stat-box">
-              <h3>5+</h3>
-              <p>Tech Areas</p>
-            </div>
-            <div class="stat-box">
-              <h3>100%</h3>
-              <p>Effort Given</p>
-            </div>
+        <div class="about-wrapper">
+          <div class="about-image">
+            <img src="/images/Profile.jpg" alt="Emmanuel Amoa-Menyah" loading="lazy" />
           </div>
 
-          <div class="about-services">
-            <h4>What I Do</h4>
-            <ul>
-              <li>Technical Support – hardware, software, and network</li>
-              <li>Microsoft 365 – Teams, Outlook, SharePoint</li>
-              <li>Web Dev – HTML, CSS, JavaScript</li>
-              <li>Automation – PowerApps, PowerAutomate</li>
-              <li>Design – Photoshop, Illustrator, Canva</li>
-            </ul>
+          <div class="about-info">
+            <p>
+              <strong>I'm Emmanuel Amoa-Menyah</strong>, an IT Support Specialist.
+            </p>
+
+            <p>
+              I have experience in hardware, software, and network support. I
+              enjoy solving technical problems and helping users work better with
+              technology.
+            </p>
+
+            <p>
+              I've worked with Microsoft 365, built emergency preparedness tools,
+              and supported critical business systems.
+            </p>
+
+            <p>I'm focused, curious, and always improving my skills.</p>
+
+            <div class="about-stats">
+              <div class="stat-box">
+                <h3>1.7+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-box">
+                <h3>12+</h3>
+                <p>Projects Done</p>
+              </div>
+              <div class="stat-box">
+                <h3>6+</h3>
+                <p>Tech Areas</p>
+              </div>
+              <div class="stat-box">
+                <h3>100%</h3>
+                <p>Effort Given</p>
+              </div>
+            </div>
+
+            <div class="about-services">
+              <h4>What I Do</h4>
+              <ul>
+                <li>Technical Support – hardware, software, and network</li>
+                <li>Microsoft 365 – Teams, Outlook, SharePoint</li>
+                <li>Web Dev – HTML, CSS, JavaScript</li>
+                <li>Automation – PowerApps, PowerAutomate</li>
+                <li>Design – Photoshop, Illustrator, Canva</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-      <section id="projects" style="margin-top: 4rem">
+      <section id="projects" class="section">
         <h2>Projects</h2>
 
         <!-- Graphic Design -->
-        <div>
+        <div class="project-category">
           <h3>Graphic Design</h3>
-          <div style="display: flex; gap: 1rem">
-            <img src="design1.jpg" alt="Design Work 1" width="150" />
-            <img src="design2.jpg" alt="Design Work 2" width="150" />
+          <div class="project-images">
+            <img src="/images/design work 1.jpg" alt="Design Work 1" loading="lazy" />
+            <img src="/images/design work 2.jpg" alt="Design Work 2" loading="lazy" />
           </div>
           <p>
-            <a href="https://www.pinterest.com/yourusername" target="_blank"
-              >See more on Pinterest →</a
-            >
+            <a href="https://www.pinterest.com/kemmydigital/" target="_blank" class="project-link">
+              See more on Pinterest →
+            </a>
           </p>
         </div>
 
         <!-- Web Development -->
-        <div style="margin-top: 2rem">
+        <div class="project-category">
           <h3>Web Development</h3>
-          <div style="display: flex; gap: 1rem">
-            <img src="web1.jpg" alt="Web Project 1" width="150" />
-            <img src="web2.jpg" alt="Web Project 2" width="150" />
+          <div class="project-images">
+            <img src="web1.jpg" alt="Web Project 1" loading="lazy" />
+            <img src="web2.jpg" alt="Web Project 2" loading="lazy" />
           </div>
           <p>
-            <a href="https://github.com/yourusername" target="_blank"
-              >Explore my GitHub →</a
-            >
+            <a href="https://github.com/kemmydigital" target="_blank" class="project-link">
+              Explore my GitHub →
+            </a>
           </p>
         </div>
 
         <!-- Tech Support -->
-        <div style="margin-top: 2rem">
+        <div class="project-category">
           <h3>Tech Support</h3>
-          <div style="display: flex; gap: 1rem">
-            <img src="review1.jpg" alt="Support Review 1" width="150" />
-            <img src="review2.jpg" alt="Support Review 2" width="150" />
+          <div class="project-images">
+            <img src="review1.jpg" alt="Support Review 1" loading="lazy" />
+            <img src="review2.jpg" alt="Support Review 2" loading="lazy" />
           </div>
-          <p><a href="#support-reviews">See support reviews ↓</a></p>
-        </div>
-      </section>
-
-      <section id="support-reviews" style="margin-top: 1rem">
-        <h2>Support Reviews</h2>
-        <div style="display: flex; gap: 1rem">
-          <img src="review1.jpg" alt="Support Review 1" width="300" />
-          <img src="review2.jpg" alt="Support Review 2" width="300" />
-        </div>
+          <p>
+            <a href="https://www.linkedin.com/in/emmanuelamoamenyah/" target="_blank" class="project-link">
+              View my LinkedIn →
+            </a>
       </section>
 
       <section id="skills" class="section">
@@ -153,16 +156,35 @@
         <form id="contactForm">
           <input type="text" id="name" placeholder="Your Name" required />
           <input type="email" id="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" required></textarea>
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
           <button type="submit">Send Message</button>
         </form>
       </section>
     </div>
 
-    
-
     <footer>
       <p>&copy; 2025 Emmanuel Amoa-Menyah</p>
     </footer>
+
+    <script>
+      // Dark mode toggle
+      document.getElementById('darkToggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+      });
+      
+      // Check for saved dark mode preference
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
   </body>
 </html>
