@@ -156,14 +156,13 @@ header.navbar {
 }
 
 .about-stats {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 2rem 0;
 }
 
 .stat-box {
-  flex: 1 1 45%;
   background: #000;
   color: #f9c74f;
   padding: 1rem;
@@ -468,18 +467,41 @@ a:focus, button:focus {
   
   .nav-links {
     display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--card-light);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  .nav-links.show {
+    display: flex;
   }
   
   .mobile-menu-toggle {
     display: block;
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   
   .skills-list {
     columns: 2;
   }
   
-  .stat-box {
-    flex: 1 1 100%;
+  .about-stats {
+    gap: 0.75rem;
   }
 }
 
