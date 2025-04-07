@@ -123,9 +123,9 @@ header.navbar {
 
 /* About Section */
 #about {
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 3rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-wrapper {
@@ -221,17 +221,31 @@ header.navbar {
 
 .project-images {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
   margin: 1rem 0;
-  flex-wrap: wrap;
 }
 
 .project-images img {
-  width: 150px;
-  height: auto;
+  width: 48%;
+  max-height: 300px;
+  object-fit: contain;
   border-radius: 5px;
   transition: transform 0.2s;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  padding: 0.5rem;
+}
+
+.dark-mode .project-images img {
+  background: #2a2a2a;
+}
+
+@media (max-width: 768px) {
+  .project-images img {
+    width: 100%;
+    max-height: none;
+  }
 }
 
 .project-images img:hover {
@@ -273,16 +287,27 @@ header.navbar {
 
 /* Sections and Cards */
 .section {
-  padding: 3rem 2rem;
+  padding: 3rem 0;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .section h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   position: relative;
-  display: inline-block;
+  display: block;
+  padding-top: 3rem;
+}
+
+.section:first-child h2 {
+  padding-top: 0;
 }
 
 .section h2::after {
