@@ -12,6 +12,12 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    historyApiFallback: true,
+    port: 5000, // added port number
+    proxy: {
+      '^/.*': {
+        target: 'http://localhost:$PORT',
+        rewrite: () => '/'
+      }
+    }
   }
 });
