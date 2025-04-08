@@ -302,7 +302,15 @@ function App() {
                   <span
                     className={isDarkMode ? "text-gray-300" : "text-gray-600"}
                   >
-                    Web Development – HTML, CSS, JavaScript
+                    Web Development – HTML, CSS, Javascript, MERN Stack, WordPress
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                  <span
+                    className={isDarkMode ? "text-gray-300" : "text-gray-600"}
+                  >
+                    Graphic Design – Photoshop, Illustrator, Figma, Canva
                   </span>
                 </li>
               </ul>
