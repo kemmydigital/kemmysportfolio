@@ -13,10 +13,55 @@ import {
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle("dark");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("All fields are required");
+      return;
+    }
+
+    try {
+      // Using Formspree as an example - create free account at formspree.io
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setError("Failed to send message");
+      }
+    } catch (error) {
+      setError("An error occurred while sending your message");
+      console.error("Form submission error:", error);
+    }
   };
 
   return (
@@ -462,74 +507,95 @@ function App() {
           >
             Contact Me
           </h2>
-          <form className="space-y-6">
-            <div>
-              <label
-                htmlFor="name"
-                className={`block text-sm font-medium mb-2 ${
-                  isDarkMode ? "text-gray-300" : "text-gray-700"
-                }`}
+          {!submitted ? (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {error && <div className="text-red-500 text-center">{error}</div>}
+              <div>
+                <label
+                  htmlFor="name"
+                  className={`block text-sm font-medium mb-2 ${
+                    isDarkMode ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 rounded-lg border ${
+                    isDarkMode
+                      ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
+                      : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
+                  }`}
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className={`block text-sm font-medium mb-2 ${
+                    isDarkMode ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 rounded-lg border ${
+                    isDarkMode
+                      ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
+                      : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
+                  }`}
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className={`block text-sm font-medium mb-2 ${
+                    isDarkMode ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  className={`w-full px-4 py-2 rounded-lg border ${
+                    isDarkMode
+                      ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
+                      : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
+                  }`}
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
               >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className={`w-full px-4 py-2 rounded-lg border ${
-                  isDarkMode
-                    ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
-                    : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
-                }`}
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className={`block text-sm font-medium mb-2 ${
-                  isDarkMode ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className={`w-full px-4 py-2 rounded-lg border ${
-                  isDarkMode
-                    ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
-                    : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
-                }`}
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className={`block text-sm font-medium mb-2 ${
-                  isDarkMode ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className={`w-full px-4 py-2 rounded-lg border ${
-                  isDarkMode
-                    ? "bg-gray-700 border-gray-600 text-gray-100 focus:border-blue-500"
-                    : "bg-white border-gray-300 text-gray-900 focus:border-blue-500"
-                }`}
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                Send Message
+              </button>
+            </form>
+          ) : (
+            <div
+              className={`text-center py-8 ${
+                isDarkMode ? "text-gray-300" : "text-gray-700"
+              }`}
             >
-              Send Message
-            </button>
-          </form>
+              <h3 className="text-2xl font-bold mb-2">Thank you!</h3>
+              <p>Your message has been sent successfully.</p>
+            </div>
+          )}
         </div>
       </section>
 
