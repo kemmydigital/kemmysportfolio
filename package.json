@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "netlify-build": "vite build && cp _redirects dist/_redirects"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
