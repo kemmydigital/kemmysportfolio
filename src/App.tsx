@@ -302,7 +302,7 @@ function App() {
                   <span
                     className={isDarkMode ? "text-gray-300" : "text-gray-600"}
                   >
-                    Web Development – HTML, CSS, Javascript, MERN Stack, WordPress
+                    Web Development – HTML, CSS, Javascript, WordPress
                   </span>
                 </li>
                 <li className="flex items-center">
